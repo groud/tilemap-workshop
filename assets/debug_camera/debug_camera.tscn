@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://m2kjnndfscjw"]
+
+[ext_resource type="Script" path="res://assets/debug_camera/debug_camera.gd" id="1_pet85"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5glct"]
+viewport_path = NodePath("SubViewport")
+
+[node name="DebugCamera" type="Node"]
+script = ExtResource("1_pet85")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+unique_name_in_owner = true
+debug_draw = 1
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+fov = 61.0
+near = 0.002
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+offset_right = 124.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckButton" type="CheckButton" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Debug 3D"
+
+[node name="DebugTextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+texture = SubResource("ViewportTexture_5glct")
+expand_mode = 2
+
+[connection signal="toggled" from="CanvasLayer/VBoxContainer/HBoxContainer/CheckButton" to="." method="_on_check_button_toggled"]
