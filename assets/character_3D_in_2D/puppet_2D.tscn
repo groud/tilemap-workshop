@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://blfbuectlxqcm"]
+
+[ext_resource type="Script" path="res://assets/character_3D_in_2D/puppet_2D.gd" id="1_rts3q"]
+[ext_resource type="Texture2D" uid="uid://m3tx03v4o3xr" path="res://assets/sprites/wizard.png" id="2_fl8es"]
+
+[node name="Puppet2D" type="Node2D"]
+script = ExtResource("1_rts3q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fl8es")
+centered = false
+offset = Vector2(-8, -16)
+region_rect = Rect2(48, 144, 16, 16)

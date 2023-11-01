@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfd35hf2qx3ca"]
+
+[ext_resource type="Script" path="res://assets/scene_tile_example/SceneTile.gd" id="1_so17s"]
+[ext_resource type="Texture2D" uid="uid://brfun5qrv42c3" path="res://assets/sprites/blacksmith.png" id="2_fxs2e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a3e50"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fggsu"]
+radius = 24.0208
+
+[node name="TileSceneExample" type="StaticBody2D"]
+script = ExtResource("1_so17s")
+
+[node name="Blacksmith" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("2_fxs2e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_a3e50")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_fggsu")
