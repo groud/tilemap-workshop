@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://m2kjnndfscjw" path="res://assets/debug_camera/debug_camera.tscn" id="1_7qrxh"]
 [ext_resource type="PackedScene" uid="uid://jpmv0n6lcbee" path="res://assets/character_3D_in_2D/character_3D.tscn" id="2_1tn2h"]
-[ext_resource type="TileSet" uid="uid://iq4hlsspcebs" path="res://final/3DCollisions/tile_set.tres" id="3_toegx"]
-[ext_resource type="Script" path="res://final/3DCollisions/TileMap.gd" id="4_48u2m"]
+[ext_resource type="TileSet" uid="uid://iq4hlsspcebs" path="res://final/3_3DCollisions/tile_set.tres" id="3_toegx"]
+[ext_resource type="Script" path="res://final/3_3DCollisions/TileMap.gd" id="4_48u2m"]
 [ext_resource type="PackedScene" uid="uid://blfbuectlxqcm" path="res://assets/character_3D_in_2D/puppet_2D.tscn" id="5_y4u61"]
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_j4mdl"]
